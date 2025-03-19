@@ -1,0 +1,4277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>doc</name>
+<visibility>1</visibility>
+<Style id="projEnvNormal">
+<IconStyle>
+<scale>0.4</scale>
+<Icon>
+<href>https://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0</scale>
+</LabelStyle>
+<LineStyle>
+<color>ff000000</color>
+<width>1.0</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>66ff54ff</color>
+</PolyStyle>
+</Style>
+<Style id="projEnvHighlight">
+<IconStyle>
+<scale>0.7</scale>
+<Icon>
+<href>https://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0.9</scale>
+</LabelStyle>
+<LineStyle>
+<color>ffffffff</color>
+<width>5.0</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>ffff54ff</color>
+</PolyStyle>
+</Style>
+<StyleMap id="projEnvNormal_projEnvHighlight">
+<Pair>
+<key>normal</key>
+<styleUrl>#projEnvNormal</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#projEnvHighlight</styleUrl>
+</Pair>
+</StyleMap>
+<Style id="easementNormal">
+<IconStyle>
+<scale>0.4</scale>
+<Icon>
+<href>https://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0</scale>
+</LabelStyle>
+<LineStyle>
+<color>ff000000</color>
+<width>1.0</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>9900ffaa</color>
+</PolyStyle>
+</Style>
+<Style id="easementHighlight">
+<IconStyle>
+<scale>0.7</scale>
+<Icon>
+<href>https://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0.9</scale>
+</LabelStyle>
+<LineStyle>
+<color>ffffffff</color>
+<width>5.0</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>cc00ffaa</color>
+</PolyStyle>
+</Style>
+<StyleMap id="easementNormal_easementHighlight">
+<Pair>
+<key>normal</key>
+<styleUrl>#easementNormal</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#easementHighlight</styleUrl>
+</Pair>
+</StyleMap>
+<Style id="surfaceOGNormal">
+<IconStyle>
+<scale>0.4</scale>
+<Icon>
+<href>https://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0</scale>
+</LabelStyle>
+<LineStyle>
+<color>ff000000</color>
+<width>1</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>99ffff54</color>
+</PolyStyle>
+</Style>
+<Style id="surfaceOGHighlight">
+<IconStyle>
+<scale>0.7</scale>
+<Icon>
+<href>https://maps.google.com/mapfiles/kml/paddle/wht-diamond.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0.9</scale>
+</LabelStyle>
+<LineStyle>
+<color>ff000000</color>
+<width>1</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>ffffff54</color>
+</PolyStyle>
+</Style>
+<StyleMap id="surfaceOGNormal_surfaceOGHighlight">
+<Pair>
+<key>normal</key>
+<styleUrl>#surfaceOGNormal</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#surfaceOGHighlight</styleUrl>
+</Pair>
+</StyleMap>
+<Style id="landParcelNormal">
+<IconStyle>
+<scale>0.4</scale>
+<Icon>
+<href>https://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0</scale>
+</LabelStyle>
+<LineStyle>
+<color>ff410090</color>
+<width>2</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>0080ffff</color>
+</PolyStyle>
+</Style>
+<Style id="landParcelHighlight">
+<IconStyle>
+<scale>0.7</scale>
+<Icon>
+<href>https://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0.9</scale>
+</LabelStyle>
+<LineStyle>
+<color>ffffffff</color>
+<width>5</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>7fffffff</color>
+</PolyStyle>
+</Style>
+<StyleMap id="landParcelNormal_landParcelHighlight">
+<Pair>
+<key>normal</key>
+<styleUrl>#landParcelNormal</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#landParcelHighlight</styleUrl>
+</Pair>
+</StyleMap>
+<Style id="ExtBndCommon">
+<IconStyle>
+<scale>0.8</scale>
+</IconStyle>
+<LabelStyle>
+<scale>1.0</scale>
+</LabelStyle>
+<LineStyle>
+<width>2.0</width>
+<gx:labelVisibility>0</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>00ffffff</color>
+</PolyStyle>
+</Style>
+<Style id="adminNormal">
+<IconStyle>
+<scale>0.7</scale>
+<Icon>
+<href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0.0</scale>
+</LabelStyle>
+<LineStyle>
+<color>ffffffff</color>
+<width>5</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>e50054ff</color>
+</PolyStyle>
+</Style>
+<Style id="adminHighlight">
+<IconStyle>
+<scale>1</scale>
+<Icon>
+<href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href>
+</Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0.8</scale>
+</LabelStyle>
+<LineStyle>
+<color>ffffffff</color>
+<width>10</width>
+<gx:labelVisibility>1</gx:labelVisibility>
+</LineStyle>
+<PolyStyle>
+<color>b20054ff</color>
+</PolyStyle>
+</Style>
+<StyleMap id="adminNormal_adminHighlight">
+<Pair>
+<key>normal</key>
+<styleUrl>#adminNormal</styleUrl>
+</Pair>
+<Pair>
+<key>highlight</key>
+<styleUrl>#adminHighlight</styleUrl>
+</Pair>
+</StyleMap>
+<Folder id="kml_ft_Administrative_Area___Région_Administrative">
+<name>Administrative_Area___Région_Administrative</name>
+<Placemark id="kml_35">
+<name>Exterior Boundary</name>
+<visibility>1</visibility>
+<LookAt>
+<longitude>-116.45135538899999</longitude>
+<latitude>54.29044119100007</latitude>
+<range>1000</range>
+</LookAt>
+<styleUrl>#ExtBndCommon</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.32676620600006</north>
+<south>54.25411617600008</south>
+<east>-116.42658451099999</east>
+<west>-116.47612626699998</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>200</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+<minFadeExtent>200</minFadeExtent>
+<maxFadeExtent>500</maxFadeExtent>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.426584608,54.3106425460001,3.0 -116.426584603,54.3105069050001,3.0 -116.436988752,54.3112125860001,3.0 -116.438930399,54.311346029,3.0 -116.448630534,54.3120038390001,3.0 -116.451121264,54.312173,3.0 -116.451118648,54.3122888190001,3.0 -116.451118649,54.3123086410001,3.0 -116.451118649,54.312309784,3.0 -116.45111866,54.312478271,3.0 -116.451121082,54.319534925,3.0 -116.451121039,54.3211781350001,3.0 -116.451119265,54.3213823080001,3.0 -116.451121322,54.3267662060001,3.0 -116.438931726,54.3267618250001,3.0 -116.426586699,54.3267571530001,3.0 -116.426585966,54.319529989,3.0 -116.426584954,54.3123023110001,3.0 -116.426584608,54.3106425460001,3.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.444871758,54.2978528350001,3.0 -116.444759593,54.2971795620001,3.0 -116.439425564,54.29748614,3.0 -116.439876886,54.300168109,3.0 -116.442093468,54.3000407470001,3.0 -116.442413986,54.3019475990001,3.0 -116.442414298,54.301949488,3.0 -116.442059508,54.301970092,3.0 -116.442363389,54.3037665570001,3.0 -116.445435373,54.3035893140001,3.0 -116.445437357,54.3035891970001,3.0 -116.445688139,54.305081165,3.0 -116.446088567,54.3074581120001,3.0 -116.44609422,54.307491645,3.0 -116.446248797,54.3084082940001,3.0 -116.446274575,54.308561178,3.0 -116.44627657,54.3085729640001,3.0 -116.44629969,54.3087102040001,3.0 -116.446323183,54.3088496710001,3.0 -116.446353599,54.3090303990001,3.0 -116.438930238,54.308529025,3.0 -116.435935884,54.3083274510001,3.0 -116.426997008,54.3077219360001,3.0 -116.426959893,54.307540283,3.0 -116.426931342,54.3074005340001,3.0 -116.426749427,54.3072525600001,3.0 -116.426584809,54.3071186540001,3.0 -116.426584945,54.3061740650001,3.0 -116.426585103,54.305074619,3.0 -116.426584979,54.3039569490001,3.0 -116.426584959,54.3038018030001,3.0 -116.426584958,54.3037628280001,3.0 -116.426584515,54.297846699,3.0 -116.426584511,54.2976659620001,3.0 -116.426585463,54.2904378710001,3.0 -116.426585825,54.2832097200001,3.0 -116.426596677,54.275977686,3.0 -116.426599433,54.268840642,3.0 -116.426599539,54.2685695800001,3.0 -116.426586184,54.2613444340001,3.0 -116.42658654,54.2541161760001,3.0 -116.438933272,54.254121151,3.0 -116.451125458,54.254124403,3.0 -116.451588391,54.254124505,3.0 -116.463934494,54.254127366,3.0 -116.476126267,54.254128517,3.0 -116.476126084,54.261356403,3.0 -116.476125597,54.268580553,3.0 -116.476125549,54.2688554590001,3.0 -116.476121604,54.275990925,3.0 -116.476124314,54.2832216350001,3.0 -116.476123652,54.290449955,3.0 -116.476123294,54.2975878030001,3.0 -116.47612058,54.2977828210001,3.0 -116.476120576,54.297857698,3.0 -116.476120479,54.297934094,3.0 -116.47612059,54.300898756,3.0 -116.476120608,54.305085811,3.0 -116.476120623,54.3092348660001,3.0 -116.476120652,54.3105820100001,3.0 -116.476120655,54.3107181890001,3.0 -116.476120456,54.3110351980001,3.0 -116.469050145,54.3105596730001,3.0 -116.468871218,54.3105476330001,3.0 -116.464324145,54.310241445,3.0 -116.463930799,54.310214946,3.0 -116.451586866,54.3093830290001,3.0 -116.45127792,54.3093625750001,3.0 -116.451119848,54.309351979,3.0 -116.446761423,54.3090581490001,3.0 -116.446730934,54.308877325,3.0 -116.446707407,54.308737745,3.0 -116.446684238,54.3086005160001,3.0 -116.446656438,54.3084358400001,3.0 -116.446609834,54.3081597290001,3.0 -116.446501719,54.307520244,3.0 -116.446090444,54.3050813610001,3.0 -116.44522632,54.299956147,3.0 -116.445210182,54.299860407,3.0 -116.444871758,54.2978528350001,3.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_36">
+<name>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:150">
+	<col style="width:275">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NAME</b></td>
+		<td>ALEXANDER 134A</td>
+	</tr>
+	<tr bgcolor="#E3E3F3">
+		<td><b>NOM</b></td>
+		<td>RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+	<tr bgcolor="">
+		<td><b>TYPE</b></td>
+		<td>INDIAN RESERVE / RÉSERVE INDIENNE</td>
+	</tr>
+	<tr bgcolor="#E3E3F3">
+		<td><b>PROVINCE</b></td>
+		<td>ALBERTA</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?can=09434">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?can=09434">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#adminNormal_adminHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.32676620600006</north>
+<south>54.25411617600008</south>
+<east>-116.42658451099999</east>
+<west>-116.47612626699998</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>200</minLodPixels>
+<maxLodPixels>1000</maxLodPixels>
+<minFadeExtent>100</minFadeExtent>
+<maxFadeExtent>500</maxFadeExtent>
+</Lod>
+</Region>
+<MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.451355389,54.2817460787773,5.0</coordinates>
+</Point>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.426584608,54.3106425460001,5.0 -116.426584603,54.3105069050001,5.0 -116.436988752,54.3112125860001,5.0 -116.438930399,54.311346029,5.0 -116.448630534,54.3120038390001,5.0 -116.451121264,54.312173,5.0 -116.451118648,54.3122888190001,5.0 -116.451118649,54.3123086410001,5.0 -116.451118649,54.312309784,5.0 -116.45111866,54.312478271,5.0 -116.451121082,54.319534925,5.0 -116.451121039,54.3211781350001,5.0 -116.451119265,54.3213823080001,5.0 -116.451121322,54.3267662060001,5.0 -116.438931726,54.3267618250001,5.0 -116.426586699,54.3267571530001,5.0 -116.426585966,54.319529989,5.0 -116.426584954,54.3123023110001,5.0 -116.426584608,54.3106425460001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.444871758,54.2978528350001,5.0 -116.444759593,54.2971795620001,5.0 -116.439425564,54.29748614,5.0 -116.439876886,54.300168109,5.0 -116.442093468,54.3000407470001,5.0 -116.442413986,54.3019475990001,5.0 -116.442414298,54.301949488,5.0 -116.442059508,54.301970092,5.0 -116.442363389,54.3037665570001,5.0 -116.445435373,54.3035893140001,5.0 -116.445437357,54.3035891970001,5.0 -116.445688139,54.305081165,5.0 -116.446088567,54.3074581120001,5.0 -116.44609422,54.307491645,5.0 -116.446248797,54.3084082940001,5.0 -116.446274575,54.308561178,5.0 -116.44627657,54.3085729640001,5.0 -116.44629969,54.3087102040001,5.0 -116.446323183,54.3088496710001,5.0 -116.446353599,54.3090303990001,5.0 -116.438930238,54.308529025,5.0 -116.435935884,54.3083274510001,5.0 -116.426997008,54.3077219360001,5.0 -116.426959893,54.307540283,5.0 -116.426931342,54.3074005340001,5.0 -116.426749427,54.3072525600001,5.0 -116.426584809,54.3071186540001,5.0 -116.426584945,54.3061740650001,5.0 -116.426585103,54.305074619,5.0 -116.426584979,54.3039569490001,5.0 -116.426584959,54.3038018030001,5.0 -116.426584958,54.3037628280001,5.0 -116.426584515,54.297846699,5.0 -116.426584511,54.2976659620001,5.0 -116.426585463,54.2904378710001,5.0 -116.426585825,54.2832097200001,5.0 -116.426596677,54.275977686,5.0 -116.426599433,54.268840642,5.0 -116.426599539,54.2685695800001,5.0 -116.426586184,54.2613444340001,5.0 -116.42658654,54.2541161760001,5.0 -116.438933272,54.254121151,5.0 -116.451125458,54.254124403,5.0 -116.451588391,54.254124505,5.0 -116.463934494,54.254127366,5.0 -116.476126267,54.254128517,5.0 -116.476126084,54.261356403,5.0 -116.476125597,54.268580553,5.0 -116.476125549,54.2688554590001,5.0 -116.476121604,54.275990925,5.0 -116.476124314,54.2832216350001,5.0 -116.476123652,54.290449955,5.0 -116.476123294,54.2975878030001,5.0 -116.47612058,54.2977828210001,5.0 -116.476120576,54.297857698,5.0 -116.476120479,54.297934094,5.0 -116.47612059,54.300898756,5.0 -116.476120608,54.305085811,5.0 -116.476120623,54.3092348660001,5.0 -116.476120652,54.3105820100001,5.0 -116.476120655,54.3107181890001,5.0 -116.476120456,54.3110351980001,5.0 -116.469050145,54.3105596730001,5.0 -116.468871218,54.3105476330001,5.0 -116.464324145,54.310241445,5.0 -116.463930799,54.310214946,5.0 -116.451586866,54.3093830290001,5.0 -116.45127792,54.3093625750001,5.0 -116.451119848,54.309351979,5.0 -116.446761423,54.3090581490001,5.0 -116.446730934,54.308877325,5.0 -116.446707407,54.308737745,5.0 -116.446684238,54.3086005160001,5.0 -116.446656438,54.3084358400001,5.0 -116.446609834,54.3081597290001,5.0 -116.446501719,54.307520244,5.0 -116.446090444,54.3050813610001,5.0 -116.44522632,54.299956147,5.0 -116.445210182,54.299860407,5.0 -116.444871758,54.2978528350001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.426584608,54.3106425460001,5.0 -116.426584603,54.3105069050001,5.0 -116.436988752,54.3112125860001,5.0 -116.438930399,54.311346029,5.0 -116.448630534,54.3120038390001,5.0 -116.451121264,54.312173,5.0 -116.451118648,54.3122888190001,5.0 -116.451118649,54.3123086410001,5.0 -116.451118649,54.312309784,5.0 -116.45111866,54.312478271,5.0 -116.451121082,54.319534925,5.0 -116.451121039,54.3211781350001,5.0 -116.451119265,54.3213823080001,5.0 -116.451121322,54.3267662060001,5.0 -116.438931726,54.3267618250001,5.0 -116.426586699,54.3267571530001,5.0 -116.426585966,54.319529989,5.0 -116.426584954,54.3123023110001,5.0 -116.426584608,54.3106425460001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.444871758,54.2978528350001,5.0 -116.444759593,54.2971795620001,5.0 -116.439425564,54.29748614,5.0 -116.439876886,54.300168109,5.0 -116.442093468,54.3000407470001,5.0 -116.442413986,54.3019475990001,5.0 -116.442414298,54.301949488,5.0 -116.442059508,54.301970092,5.0 -116.442363389,54.3037665570001,5.0 -116.445435373,54.3035893140001,5.0 -116.445437357,54.3035891970001,5.0 -116.445688139,54.305081165,5.0 -116.446088567,54.3074581120001,5.0 -116.44609422,54.307491645,5.0 -116.446248797,54.3084082940001,5.0 -116.446274575,54.308561178,5.0 -116.44627657,54.3085729640001,5.0 -116.44629969,54.3087102040001,5.0 -116.446323183,54.3088496710001,5.0 -116.446353599,54.3090303990001,5.0 -116.438930238,54.308529025,5.0 -116.435935884,54.3083274510001,5.0 -116.426997008,54.3077219360001,5.0 -116.426959893,54.307540283,5.0 -116.426931342,54.3074005340001,5.0 -116.426749427,54.3072525600001,5.0 -116.426584809,54.3071186540001,5.0 -116.426584945,54.3061740650001,5.0 -116.426585103,54.305074619,5.0 -116.426584979,54.3039569490001,5.0 -116.426584959,54.3038018030001,5.0 -116.426584958,54.3037628280001,5.0 -116.426584515,54.297846699,5.0 -116.426584511,54.2976659620001,5.0 -116.426585463,54.2904378710001,5.0 -116.426585825,54.2832097200001,5.0 -116.426596677,54.275977686,5.0 -116.426599433,54.268840642,5.0 -116.426599539,54.2685695800001,5.0 -116.426586184,54.2613444340001,5.0 -116.42658654,54.2541161760001,5.0 -116.438933272,54.254121151,5.0 -116.451125458,54.254124403,5.0 -116.451588391,54.254124505,5.0 -116.463934494,54.254127366,5.0 -116.476126267,54.254128517,5.0 -116.476126084,54.261356403,5.0 -116.476125597,54.268580553,5.0 -116.476125549,54.2688554590001,5.0 -116.476121604,54.275990925,5.0 -116.476124314,54.2832216350001,5.0 -116.476123652,54.290449955,5.0 -116.476123294,54.2975878030001,5.0 -116.47612058,54.2977828210001,5.0 -116.476120576,54.297857698,5.0 -116.476120479,54.297934094,5.0 -116.47612059,54.300898756,5.0 -116.476120608,54.305085811,5.0 -116.476120623,54.3092348660001,5.0 -116.476120652,54.3105820100001,5.0 -116.476120655,54.3107181890001,5.0 -116.476120456,54.3110351980001,5.0 -116.469050145,54.3105596730001,5.0 -116.468871218,54.3105476330001,5.0 -116.464324145,54.310241445,5.0 -116.463930799,54.310214946,5.0 -116.451586866,54.3093830290001,5.0 -116.45127792,54.3093625750001,5.0 -116.451119848,54.309351979,5.0 -116.446761423,54.3090581490001,5.0 -116.446730934,54.308877325,5.0 -116.446707407,54.308737745,5.0 -116.446684238,54.3086005160001,5.0 -116.446656438,54.3084358400001,5.0 -116.446609834,54.3081597290001,5.0 -116.446501719,54.307520244,5.0 -116.446090444,54.3050813610001,5.0 -116.44522632,54.299956147,5.0 -116.445210182,54.299860407,5.0 -116.444871758,54.2978528350001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.451355389,54.2817460787773,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+</Folder>
+<Folder id="kml_ft_Easement___Servitude">
+<name>Easement___Servitude</name>
+<Placemark id="kml_8">
+<name>CATHODIC PROTECTION BED, 83108 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1144709</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>CATHODIC PROTECTION BED</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>83108 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=83108+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=83108+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=83108%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=83108%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30871020400008</north>
+<south>54.30745811200006</south>
+<east>-116.44599537499994</east>
+<west>-116.44629968999999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.446248797,54.3084082940001,4.0 -116.446274575,54.308561178,4.0 -116.44627657,54.3085729640001,4.0 -116.44629969,54.3087102040001,4.0 -116.446204505,54.3087037770001,4.0 -116.44618137,54.3085665570001,4.0 -116.446153616,54.3084018700001,4.0 -116.445995375,54.3074634750001,4.0 -116.446088567,54.3074581120001,4.0 -116.446248797,54.3084082940001,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.4461475325,54.3080867889633,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_6">
+<name>LOT 5 (LONG TERM ACCESS ROAD), 2964R RSA</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1126408</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>LOT 5 (LONG TERM ACCESS ROAD)</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>2964R RSA AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=2964R+RSA+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=2964R+RSA+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=2964R%20RSA%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=2964R%20RSA%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30938302900006</north>
+<south>54.30815972900007</south>
+<east>-116.44660983399996</east>
+<west>-116.45158686599996</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.446765448,54.308443217,4.0 -116.446656438,54.3084358400001,4.0 -116.446609834,54.3081597290001,4.0 -116.451586825,54.3084956640001,4.0 -116.451586838,54.3087677300001,4.0 -116.451586845,54.308930495,4.0 -116.451586852,54.3090667280001,4.0 -116.451586858,54.309203917,4.0 -116.451586866,54.3093830290001,4.0 -116.451119848,54.309351979,4.0 -116.45112012,54.309172597,4.0 -116.451120329,54.309035345,4.0 -116.45112049,54.30889934,4.0 -116.451120662,54.308736525,4.0 -116.446765448,54.308443217,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.451353731668,54.3087713790001,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_3">
+<name>PIPELINE R\W, 2897R RSA</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1144892</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R\W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>2897R RSA AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=2897R+RSA+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=2897R+RSA+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=2897R%20RSA%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=2897R%20RSA%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30938302900006</north>
+<south>54.30740053400007</south>
+<east>-116.42693134199999</east>
+<west>-116.45158686599996</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.446707407,54.308737745,4.0 -116.451120329,54.309035345,4.0 -116.451277298,54.3090459150001,4.0 -116.451586852,54.3090667280001,4.0 -116.451586858,54.309203917,4.0 -116.451586866,54.3093830290001,4.0 -116.451119848,54.309351979,4.0 -116.446761423,54.3090581490001,4.0 -116.446730934,54.308877325,4.0 -116.446707407,54.308737745,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.44627657,54.3085729640001,4.0 -116.44629969,54.3087102040001,4.0 -116.446323183,54.3088496710001,4.0 -116.446353599,54.3090303990001,4.0 -116.438930238,54.308529025,4.0 -116.435935884,54.3083274510001,4.0 -116.426997008,54.3077219360001,4.0 -116.426959893,54.307540283,4.0 -116.426931342,54.3074005340001,4.0 -116.43599772,54.3080146930001,4.0 -116.446204505,54.3087037770001,4.0 -116.44618137,54.3085665570001,4.0 -116.446153616,54.3084018700001,4.0 -116.445995375,54.3074634750001,4.0 -116.446088567,54.3074581120001,4.0 -116.446248797,54.3084082940001,4.0 -116.446274575,54.308561178,4.0 -116.44627657,54.3085729640001,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.436627159178,54.3082154665001,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_4">
+<name>PIPELINE R\W, 2898R RSA</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1144891</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R\W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>2898R RSA AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=2898R+RSA+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=2898R+RSA+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=2898R%20RSA%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=2898R%20RSA%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.31230864100007</north>
+<south>54.31050690500007</south>
+<east>-116.42658460299998</east>
+<west>-116.451121264</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.438930399,54.311346029,4.0 -116.448630534,54.3120038390001,4.0 -116.451121264,54.312173,4.0 -116.451118648,54.3122888190001,4.0 -116.451118649,54.3123086410001,4.0 -116.451094674,54.312306839,4.0 -116.448603967,54.3121376770001,4.0 -116.438903662,54.3114798550001,4.0 -116.43696204,54.311346412,4.0 -116.426584608,54.3106425460001,4.0 -116.426584603,54.3105069050001,4.0 -116.436988752,54.3112125860001,4.0 -116.438930399,54.311346029,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.438847868572,54.3114077730001,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_2">
+<name>PIPELINE R\W, 83114 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1144889</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R\W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>83114 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=83114+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=83114+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=83114%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=83114%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30920391700005</north>
+<south>54.30740053400007</south>
+<east>-116.42693134199999</east>
+<west>-116.45158685799998</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.446707407,54.308737745,4.0 -116.451120329,54.309035345,4.0 -116.451277298,54.3090459150001,4.0 -116.451586852,54.3090667280001,4.0 -116.451586858,54.309203917,4.0 -116.451120146,54.3091725990001,4.0 -116.446730934,54.308877325,4.0 -116.446707407,54.308737745,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.446271995,54.308846203,4.0 -116.435970824,54.3081506840001,4.0 -116.426959893,54.307540283,4.0 -116.426931342,54.3074005340001,4.0 -116.43599772,54.3080146930001,4.0 -116.446204505,54.3087037770001,4.0 -116.44629969,54.3087102040001,4.0 -116.446323183,54.3088496710001,4.0 -116.446271995,54.308846203,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.436613149526,54.3081251025001,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_10">
+<name>PIPELINE R\W, 83116 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1144888</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R\W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>83116 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=83116+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=83116+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=83116%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=83116%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30938302900006</north>
+<south>54.30754028300004</south>
+<east>-116.42695989299995</east>
+<west>-116.45158686599996</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.451586866,54.3093830290001,4.0 -116.451119848,54.309351979,4.0 -116.446761423,54.3090581490001,4.0 -116.446730934,54.308877325,4.0 -116.45112012,54.309172597,4.0 -116.451586858,54.309203917,4.0 -116.451586866,54.3093830290001,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.446323183,54.3088496710001,4.0 -116.446353599,54.3090303990001,4.0 -116.438930238,54.308529025,4.0 -116.435935884,54.3083274510001,4.0 -116.426997008,54.3077219360001,4.0 -116.426959893,54.307540283,4.0 -116.435970824,54.3081506840001,4.0 -116.446271995,54.308846203,4.0 -116.446323183,54.3088496710001,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.436639717762,54.308285341,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_9">
+<name>PIPELINE R\W, 84676 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1144887</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R\W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>84676 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=84676+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=84676+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=84676%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=84676%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.310718189000056</north>
+<south>54.30725256000005</south>
+<east>-116.42674942699995</east>
+<west>-116.47612065599998</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.426931342,54.3074005340001,4.0 -116.426749427,54.3072525600001,4.0 -116.436024172,54.307880847,4.0 -116.44618137,54.3085665570001,4.0 -116.44627657,54.3085729640001,4.0 -116.44629969,54.3087102040001,4.0 -116.446204505,54.3087037770001,4.0 -116.43599772,54.3080146930001,4.0 -116.426931342,54.3074005340001,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.464355639,54.3097909030001,4.0 -116.467389806,54.3091006000001,4.0 -116.469214835,54.310118011,4.0 -116.476120656,54.3105825660001,4.0 -116.476120655,54.3107181890001,4.0 -116.469111751,54.3102467000001,4.0 -116.467336832,54.3092572260001,4.0 -116.464385988,54.3099285380001,4.0 -116.461115361,54.3097093440001,4.0 -116.451586852,54.3090667280001,4.0 -116.451277298,54.3090459150001,4.0 -116.451120329,54.309035345,4.0 -116.446707407,54.308737745,4.0 -116.446684238,54.3086005160001,4.0 -116.446733793,54.308603872,4.0 -116.45112049,54.30889934,4.0 -116.451586845,54.308930495,4.0 -116.461141728,54.3095753920001,4.0 -116.464355639,54.3097909030001,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.461383965922,54.3096593525001,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_5">
+<name>PIPELINE R\W, 84677 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1144886</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R\W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>84677 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=84677+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=84677+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=84677%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=84677%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.31058256600005</north>
+<south>54.30707863200007</south>
+<east>-116.42658480899996</east>
+<west>-116.47612065599998</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.446248797,54.3084082940001,4.0 -116.446274575,54.308561178,4.0 -116.44627657,54.3085729640001,4.0 -116.44618137,54.3085665570001,4.0 -116.436024172,54.307880847,4.0 -116.426749427,54.3072525600001,4.0 -116.426584809,54.3071186540001,4.0 -116.426584812,54.3070786320001,4.0 -116.436055954,54.3077202260001,4.0 -116.446153616,54.3084018700001,4.0 -116.446248797,54.3084082940001,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.451586845,54.308930495,4.0 -116.45112049,54.30889934,4.0 -116.446733793,54.308603872,4.0 -116.446684238,54.3086005160001,4.0 -116.446656438,54.3084358400001,4.0 -116.446765448,54.308443217,4.0 -116.451120662,54.308736525,4.0 -116.451586838,54.3087677300001,4.0 -116.461173378,54.3094146600001,4.0 -116.464319224,54.30962572,4.0 -116.467453374,54.3089126360001,4.0 -116.46933854,54.3099635740001,4.0 -116.476120648,54.310419811,4.0 -116.476120656,54.3105825660001,4.0 -116.469214835,54.310118011,4.0 -116.467389806,54.3091006000001,4.0 -116.464355639,54.3097909030001,4.0 -116.461141728,54.3095753920001,4.0 -116.451586845,54.308930495,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.461371801287,54.3095092030001,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_7">
+<name>PIPELINE R\W, 90925 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>EASEMENT / SERVITUDE</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1192883</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R\W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>90925 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=90925+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=90925+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=90925%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=90925%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#easementNormal_easementHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.31103519800007</north>
+<south>54.30906672800006</south>
+<east>-116.45158685199999</east>
+<west>-116.47612065499999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.468871218,54.3105476330001,4.0 -116.464324145,54.310241445,4.0 -116.463930799,54.310214946,4.0 -116.451586866,54.3093830290001,4.0 -116.451586858,54.309203917,4.0 -116.451586852,54.3090667280001,4.0 -116.461115361,54.3097093440001,4.0 -116.464385988,54.3099285380001,4.0 -116.467336832,54.3092572260001,4.0 -116.469111751,54.3102467000001,4.0 -116.476120655,54.3107181890001,4.0 -116.476120456,54.3110351980001,4.0 -116.469050145,54.3105596730001,4.0 -116.468871218,54.3105476330001,4.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+<innerBoundaryIs>
+<LinearRing>
+<coordinates>-116.467213033,54.309623238,4.0 -116.465204674,54.310080095,4.0 -116.468421024,54.310296667,4.0 -116.467213033,54.309623238,4.0</coordinates>
+</LinearRing>
+</innerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.463415184328,54.3100509630001,4.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+</Folder>
+<Folder id="kml_ft_Land_Parcel___Parcelle_de_Terre">
+<name>Land_Parcel___Parcelle_de_Terre</name>
+<Placemark id="kml_32">
+<name>LOT 1 REMAINDER, 83478 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>LAND PARCEL / PARCELLE DE TERRAIN</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1204147</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>LOT 1 REMAINDER</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>YES / OUI</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>83478 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=83478+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=83478+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=83478%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=83478%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#landParcelNormal_landParcelHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30938302900006</north>
+<south>54.25411617600008</south>
+<east>-116.42658451099999</east>
+<west>-116.47612626699998</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.446501719,54.307520244,2.0 -116.44990356,54.307749668,2.0 -116.451275585,54.3078422450001,2.0 -116.451585085,54.3078629550001,2.0 -116.451586825,54.3084956640001,2.0 -116.451586838,54.3087677300001,2.0 -116.451586845,54.308930495,2.0 -116.451586852,54.3090667280001,2.0 -116.451586858,54.309203917,2.0 -116.451586866,54.3093830290001,2.0 -116.45127792,54.3093625750001,2.0 -116.451119848,54.309351979,2.0 -116.446761423,54.3090581490001,2.0 -116.446730934,54.308877325,2.0 -116.446707407,54.308737745,2.0 -116.446684238,54.3086005160001,2.0 -116.446656438,54.3084358400001,2.0 -116.446609834,54.3081597290001,2.0 -116.446501719,54.307520244,2.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.426584945,54.3061740650001,2.0 -116.44609422,54.307491645,2.0 -116.446248797,54.3084082940001,2.0 -116.446274575,54.308561178,2.0 -116.44627657,54.3085729640001,2.0 -116.44629969,54.3087102040001,2.0 -116.446323183,54.3088496710001,2.0 -116.446353599,54.3090303990001,2.0 -116.438930238,54.308529025,2.0 -116.435935884,54.3083274510001,2.0 -116.426997008,54.3077219360001,2.0 -116.426959893,54.307540283,2.0 -116.426931342,54.3074005340001,2.0 -116.426749427,54.3072525600001,2.0 -116.426584809,54.3071186540001,2.0 -116.426584945,54.3061740650001,2.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.476125597,54.268580553,2.0 -116.476125549,54.2688554590001,2.0 -116.476121604,54.275990925,2.0 -116.476124314,54.2832216350001,2.0 -116.476123652,54.290449955,2.0 -116.476123294,54.2975878030001,2.0 -116.47612058,54.2977828210001,2.0 -116.476120576,54.297857698,2.0 -116.463929414,54.297856644,2.0 -116.457128176,54.297855645,2.0 -116.451892755,54.2978545660001,2.0 -116.451585578,54.297854548,2.0 -116.444871758,54.2978528350001,2.0 -116.444759593,54.2971795620001,2.0 -116.439425564,54.29748614,2.0 -116.439876886,54.300168109,2.0 -116.442093468,54.3000407470001,2.0 -116.442413986,54.3019475990001,2.0 -116.442414298,54.301949488,2.0 -116.442059508,54.301970092,2.0 -116.442363389,54.3037665570001,2.0 -116.445435373,54.3035893140001,2.0 -116.445437357,54.3035891970001,2.0 -116.445688139,54.305081165,2.0 -116.426585103,54.305074619,2.0 -116.426584979,54.3039569490001,2.0 -116.426584959,54.3038018030001,2.0 -116.426584958,54.3037628280001,2.0 -116.426584515,54.297846699,2.0 -116.426584511,54.2976659620001,2.0 -116.426585463,54.2904378710001,2.0 -116.426585825,54.2832097200001,2.0 -116.426596677,54.275977686,2.0 -116.426599433,54.268840642,2.0 -116.426599539,54.2685695800001,2.0 -116.426586184,54.2613444340001,2.0 -116.42658654,54.2541161760001,2.0 -116.438933272,54.254121151,2.0 -116.451125458,54.254124403,2.0 -116.451588391,54.254124505,2.0 -116.463934494,54.254127366,2.0 -116.476126267,54.254128517,2.0 -116.476126084,54.261356403,2.0 -116.476125597,54.268580553,2.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.451357099847,54.2795986705001,2.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_29">
+<name>LOT 10, 105000 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>LAND PARCEL / PARCELLE DE TERRAIN</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1214397</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>LOT 10</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105000 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105000+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105000+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105000%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105000%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#landParcelNormal_landParcelHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.309234866000054</north>
+<south>54.29785283500007</south>
+<east>-116.44487175799998</east>
+<west>-116.47612062299999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.451585578,54.297854548,2.0 -116.451892755,54.2978545660001,2.0 -116.457128176,54.297855645,2.0 -116.463929414,54.297856644,2.0 -116.476120576,54.297857698,2.0 -116.476120479,54.297934094,2.0 -116.47612059,54.300898756,2.0 -116.476120591,54.300973458,2.0 -116.476120591,54.30106333,2.0 -116.476120608,54.305085811,2.0 -116.476120623,54.3092348660001,2.0 -116.451585085,54.3078629550001,2.0 -116.451275585,54.3078422450001,2.0 -116.451275667,54.3070338140001,2.0 -116.449904029,54.3069411210001,2.0 -116.44990356,54.307749668,2.0 -116.446501719,54.307520244,2.0 -116.446090444,54.3050813610001,2.0 -116.44522632,54.299956147,2.0 -116.445210182,54.299860407,2.0 -116.444871758,54.2978528350001,2.0 -116.451585578,54.297854548,2.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.460975908669,54.3035438505001,2.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_33">
+<name>LOT 2 REMAINDER, 83478 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>LAND PARCEL / PARCELLE DE TERRAIN</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1204145</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>LOT 2 REMAINDER</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>83478 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=83478+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=83478+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=83478%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=83478%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#landParcelNormal_landParcelHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.31103519800007</north>
+<south>54.307862955000076</south>
+<east>-116.45158508499998</east>
+<west>-116.47612065499999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.463930799,54.310214946,2.0 -116.451586866,54.3093830290001,2.0 -116.451586858,54.309203917,2.0 -116.451586852,54.3090667280001,2.0 -116.451586845,54.308930495,2.0 -116.451586838,54.3087677300001,2.0 -116.451586825,54.3084956640001,2.0 -116.451585085,54.3078629550001,2.0 -116.476120623,54.3092348660001,2.0 -116.476120652,54.3105820100001,2.0 -116.476120655,54.3107181890001,2.0 -116.476120456,54.3110351980001,2.0 -116.469050145,54.3105596730001,2.0 -116.468871218,54.3105476330001,2.0 -116.464324145,54.310241445,2.0 -116.463930799,54.310214946,2.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.464343751166,54.3094490765001,2.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_30">
+<name>LOT 4, 83478 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>LAND PARCEL / PARCELLE DE TERRAIN</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1126407</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>LOT 4</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>83478 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=83478+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=83478+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=83478%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=83478%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#landParcelNormal_landParcelHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.32676620600006</north>
+<south>54.31050690500007</south>
+<east>-116.42658460299998</east>
+<west>-116.45112132199995</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.426584608,54.3106425460001,2.0 -116.426584603,54.3105069050001,2.0 -116.436988752,54.3112125860001,2.0 -116.438930399,54.311346029,2.0 -116.448630534,54.3120038390001,2.0 -116.451121264,54.312173,2.0 -116.451118648,54.3122888190001,2.0 -116.451118649,54.3123086410001,2.0 -116.451118649,54.312309784,2.0 -116.45111866,54.312478271,2.0 -116.451121082,54.319534925,2.0 -116.451121039,54.3211781350001,2.0 -116.451119265,54.3213823080001,2.0 -116.451121322,54.3267662060001,2.0 -116.438931726,54.3267618250001,2.0 -116.426586699,54.3267571530001,2.0 -116.426585966,54.319529989,2.0 -116.426584954,54.3123023110001,2.0 -116.426584608,54.3106425460001,2.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.438853307282,54.3186365555001,2.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_34">
+<name>LOT 7, 101790 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>LAND PARCEL / PARCELLE DE TERRAIN</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1204148</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>LOT 7</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>101790 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=101790+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=101790+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=101790%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=101790%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#landParcelNormal_landParcelHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30749164500003</north>
+<south>54.30507461900004</south>
+<east>-116.42658494499995</east>
+<west>-116.44609421999996</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.44609422,54.307491645,2.0 -116.426584945,54.3061740650001,2.0 -116.426585103,54.305074619,2.0 -116.445688139,54.305081165,2.0 -116.446088567,54.3074581120001,2.0 -116.44609422,54.307491645,2.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.437045257647,54.306283132,2.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_31">
+<name>LOT 9, 104813 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>LAND PARCEL / PARCELLE DE TERRAIN</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1214012</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>LOT 9</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>104813 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=104813+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=104813+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=104813%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=104813%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#landParcelNormal_landParcelHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.307842245000074</north>
+<south>54.30694112100008</south>
+<east>-116.44990355999994</east>
+<west>-116.45127566699995</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.451275585,54.3078422450001,2.0 -116.44990356,54.307749668,2.0 -116.449904029,54.3069411210001,2.0 -116.451275667,54.3070338140001,2.0 -116.451275585,54.3078422450001,2.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.450589699176,54.3073916830001,2.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+</Folder>
+<Folder id="kml_ft_Oil_and_Gas___Pétrole_et_Gaz">
+<name>Oil_and_Gas___Pétrole_et_Gaz</name>
+<Placemark id="kml_16">
+<name>ACCESS ROAD, 105723 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1216640</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>ACCESS ROAD</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105723 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105723+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105723+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105723%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105723%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.32192278000008</north>
+<south>54.31228881900006</south>
+<east>-116.44987831199995</east>
+<west>-116.45111865999996</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.449878312,54.3139127330001,5.0 -116.450337777,54.312809616,5.0 -116.451118648,54.3122888190001,5.0 -116.451118649,54.3123086410001,5.0 -116.451118649,54.312309784,5.0 -116.45111866,54.312478271,5.0 -116.450548509,54.312873821,5.0 -116.450110485,54.313925425,5.0 -116.450262035,54.3155333300001,5.0 -116.451090107,54.315953128,5.0 -116.45109031,54.319141282,5.0 -116.451090336,54.3195349260001,5.0 -116.451090467,54.3216020040001,5.0 -116.450605905,54.3219227800001,5.0 -116.450433762,54.3218334790001,5.0 -116.450862514,54.321551394,5.0 -116.450859594,54.3195348530001,5.0 -116.450859817,54.319140481,5.0 -116.450859618,54.316014609,5.0 -116.450037101,54.3155976240001,5.0 -116.449878312,54.3139127330001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.450498486,54.3128481739516,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_13">
+<name>ACCESS ROAD, 105791 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1216779</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>ACCESS ROAD</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105791 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105791+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105791+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105791%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105791%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.27759502100008</north>
+<south>54.27410591600005</south>
+<east>-116.45157521499999</east>
+<west>-116.46825992999999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.451575221,54.2774849350001,5.0 -116.451575224,54.2774574160001,5.0 -116.454401829,54.277123256,5.0 -116.458734023,54.2766110320001,5.0 -116.464822518,54.275890863,5.0 -116.465230373,54.2757508700001,5.0 -116.465366564,54.2756580240001,5.0 -116.466357172,54.2749775130001,5.0 -116.468230352,54.2741059160001,5.0 -116.46825993,54.274264411,5.0 -116.46651772,54.2750750660001,5.0 -116.465181557,54.2759859830001,5.0 -116.458770383,54.2767443110001,5.0 -116.454438239,54.2772565430001,5.0 -116.454019964,54.277305998,5.0 -116.45251482,54.2774839460001,5.0 -116.451575215,54.2775950210001,5.0 -116.451575221,54.2774849350001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.465160268642,54.2758504685001,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_14">
+<name>ACCESS ROAD, 89673 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1222349</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>ACCESS ROAD</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>89673 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=89673+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=89673+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=89673%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=89673%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30196386000006</north>
+<south>54.300973371000055</south>
+<east>-116.47109310399998</east>
+<west>-116.48119559499997</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.471093104,54.3010632570001,5.0 -116.471093108,54.3010183220001,5.0 -116.471093114,54.3009733850001,5.0 -116.476120591,54.300973458,5.0 -116.47997335,54.3009733710001,5.0 -116.481195595,54.3019327900001,5.0 -116.481023756,54.301948327,5.0 -116.480851915,54.3019638600001,5.0 -116.479784668,54.301126105,5.0 -116.479570592,54.301063259,5.0 -116.476120591,54.30106333,5.0 -116.471093104,54.3010632570001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.480412633982,54.3014686155001,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_23">
+<name>ACCESS ROAD, 89870 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1145623</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>ACCESS ROAD</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>89870 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=89870+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=89870+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=89870%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=89870%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30395694900005</north>
+<south>54.30096999700004</south>
+<east>-116.42658495799998</east>
+<west>-116.43758500799999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.437585008,54.3011047620001,5.0 -116.431341822,54.301110437,5.0 -116.426584979,54.3039569490001,5.0 -116.426584959,54.3038018030001,5.0 -116.426584958,54.3037628280001,5.0 -116.431243778,54.300975781,5.0 -116.437584667,54.300969997,5.0 -116.437584742,54.3009969550001,5.0 -116.437585008,54.3011047620001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.428918851124,54.302463473,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_22">
+<name>ACCESS ROAD, 97750 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1191834</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>ACCESS ROAD</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>97750 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=97750+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=97750+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=97750%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=97750%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30938302900006</north>
+<south>54.291655709000054</south>
+<east>-116.45127558499996</east>
+<west>-116.45212191399997</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.451585578,54.297854548,5.0 -116.451585537,54.2975834970001,5.0 -116.451584654,54.2916557780001,5.0 -116.452121891,54.2916557090001,5.0 -116.452121914,54.291836464,5.0 -116.451891741,54.2919712120001,5.0 -116.451892755,54.2978545660001,5.0 -116.451585578,54.297854548,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.451586667,54.3050829260001,5.0 -116.451585085,54.3078629550001,5.0 -116.451586825,54.3084956640001,5.0 -116.451586838,54.3087677300001,5.0 -116.451586845,54.308930495,5.0 -116.451586852,54.3090667280001,5.0 -116.451586858,54.309203917,5.0 -116.451586866,54.3093830290001,5.0 -116.45127792,54.3093625750001,5.0 -116.451277298,54.3090459150001,5.0 -116.451275585,54.3078422450001,5.0 -116.451275667,54.3070338140001,5.0 -116.451277284,54.3050829060001,5.0 -116.451277641,54.304728158,5.0 -116.451278793,54.3034515320001,5.0 -116.451586233,54.302192027,5.0 -116.451586425,54.3034631420001,5.0 -116.451586667,54.3050829260001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.4514312255,54.3060998893856,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_26">
+<name>ACCESS ROAD, 99918 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1194267</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>ACCESS ROAD</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>99918 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=99918+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=99918+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=99918%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=99918%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.29391902200007</north>
+<south>54.26729065500007</south>
+<east>-116.44235585299998</east>
+<west>-116.47066373099995</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.442710319,54.271844828,5.0 -116.450019928,54.2776364060001,5.0 -116.469654956,54.2930790840001,5.0 -116.47064447,54.293766223,5.0 -116.4706541,54.2938426220001,5.0 -116.470663731,54.2939190220001,5.0 -116.469534532,54.2931348830001,5.0 -116.449896611,54.277689895,5.0 -116.442466433,54.271802758,5.0 -116.442409266,54.26947002,5.0 -116.442355853,54.2672919440001,5.0 -116.442432575,54.2672912990001,5.0 -116.442509298,54.2672906550001,5.0 -116.442562719,54.26946873,5.0 -116.442616987,54.2716828390001,5.0 -116.442710319,54.271844828,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.453698557419,54.2806048385001,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_19">
+<name>BORROW PIT 1, 105791 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1216778</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>BORROW PIT 1</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105791 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105791+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105791+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105791%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105791%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.27817988900006</north>
+<south>54.27730599800003</south>
+<east>-116.45251481999998</east>
+<west>-116.45426022599997</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.454260226,54.278001939,5.0 -116.452755058,54.2781798890001,5.0 -116.45251482,54.2774839460001,5.0 -116.454019964,54.277305998,5.0 -116.454260226,54.278001939,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.453387518751,54.2777429435,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_24">
+<name>BORROW PIT 2, 105791 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1216780</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>BORROW PIT 2</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105791 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105791+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105791+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105791%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105791%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.27565802400005</north>
+<south>54.27451505100004</south>
+<east>-116.46444602999998</east>
+<west>-116.46635717199996</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.46444603,54.275195555,5.0 -116.465048302,54.274784965,5.0 -116.46543664,54.274515051,5.0 -116.466357172,54.2749775130001,5.0 -116.465366564,54.2756580240001,5.0 -116.46444603,54.275195555,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.46540220437,54.2750865375,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_28">
+<name>BORROW PIT, 105723 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1216641</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>BORROW PIT</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105723 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105723+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105723+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105723%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105723%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.32175914800007</north>
+<south>54.32061638600004</south>
+<east>-116.44706954299994</east>
+<west>-116.44899783499994</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.448997835,54.3210876630001,5.0 -116.447976951,54.3217591480001,5.0 -116.447069543,54.321287715,5.0 -116.448090058,54.320616386,5.0 -116.448997835,54.3210876630001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.4480335606,54.3211877670001,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_15">
+<name>PAD SITE, 105723 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1216642</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PAD SITE</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105723 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105723+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105723+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105723%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105723%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.32336680700007</north>
+<south>54.32108766300007</south>
+<east>-116.44680323199998</east>
+<west>-116.45060590499997</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.448997835,54.3210876630001,5.0 -116.44917017,54.321177241,5.0 -116.450433762,54.3218334790001,5.0 -116.450605905,54.3219227800001,5.0 -116.448411444,54.3233668070001,5.0 -116.446803232,54.322531122,5.0 -116.447823751,54.3218599130001,5.0 -116.447976951,54.3217591480001,5.0 -116.448997835,54.3210876630001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.448704249,54.3222272350001,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_11">
+<name>PAD SITE, 105791 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1216781</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PAD SITE</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105791 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105791+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105791+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105791%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105791%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.274348288000056</north>
+<south>54.27229369200006</south>
+<east>-116.46793833899994</east>
+<west>-116.47048923099999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.467938339,54.2724257680001,5.0 -116.470156556,54.2722936920001,5.0 -116.470324261,54.2732582740001,5.0 -116.470418523,54.2738004220001,5.0 -116.470489231,54.2742070940001,5.0 -116.469411434,54.2742758460001,5.0 -116.468275606,54.2743482880001,5.0 -116.46825993,54.274264411,5.0 -116.468230352,54.2741059160001,5.0 -116.467938339,54.2724257680001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.469214547807,54.2733209900001,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_12">
+<name>PIPELINE R/W, 105753 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1216712</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R/W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>105753 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=105753+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=105753+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=105753%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=105753%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.32194946800007</north>
+<south>54.32098678300008</south>
+<east>-116.44782375099999</east>
+<west>-116.45112103899999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.451119265,54.3213823080001,5.0 -116.450862514,54.321551394,5.0 -116.450433762,54.3218334790001,5.0 -116.44917017,54.321177241,5.0 -116.447996123,54.3219494680001,5.0 -116.447823751,54.3218599130001,5.0 -116.447976951,54.3217591480001,5.0 -116.448997835,54.3210876630001,5.0 -116.449150663,54.3209867830001,5.0 -116.450414503,54.321643151,5.0 -116.451121039,54.3211781350001,5.0 -116.451119265,54.3213823080001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.449903880567,54.3214681255001,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_27">
+<name>PIPELINE R/W, 106085 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1217587</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>PIPELINE R/W</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>106085 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=106085+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=106085+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=106085%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=106085%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.29793409400003</north>
+<south>54.27325827400006</south>
+<east>-116.46809324399999</east>
+<west>-116.47612057999999</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.470132179,54.273750831,5.0 -116.470049387,54.273274643,5.0 -116.470324261,54.2732582740001,5.0 -116.470418523,54.2738004220001,5.0 -116.469555144,54.27442934,5.0 -116.468397897,54.2745031490001,5.0 -116.468628106,54.2757375250001,5.0 -116.469799289,54.2837977410001,5.0 -116.47069776,54.2909730120001,5.0 -116.471076718,54.293889059,5.0 -116.475977115,54.2977326010001,5.0 -116.47608579,54.2977552290001,5.0 -116.47612058,54.2977828210001,5.0 -116.476120576,54.297857698,5.0 -116.476120479,54.297934094,5.0 -116.475805545,54.2978685210001,5.0 -116.470807163,54.2939481080001,5.0 -116.470422115,54.290985048,5.0 -116.469523783,54.283810499,5.0 -116.468353071,54.275753148,5.0 -116.468093244,54.2743599180001,5.0 -116.468275606,54.2743482880001,5.0 -116.469411434,54.2742758460001,5.0 -116.470132179,54.273750831,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.469885928102,54.285596184,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_18">
+<name>WELL SITE, 89673 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1222348</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>WELL SITE</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>89673 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=89673+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=89673+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=89673%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=89673%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30142251800004</north>
+<south>54.30052422500006</south>
+<east>-116.46925013699996</east>
+<west>-116.47109316099994</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.469250137,54.3014224390001,5.0 -116.46925027,54.3005242250001,5.0 -116.471093161,54.3005243040001,5.0 -116.471093114,54.3009733850001,5.0 -116.471093108,54.3010183220001,5.0 -116.471093104,54.3010632570001,5.0 -116.471093069,54.301422518,5.0 -116.469250137,54.3014224390001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.470171658748,54.3009733715,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_20">
+<name>WELL SITE, 97750 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1191833</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>WELL SITE</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>97750 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=97750+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=97750+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=97750%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=97750%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.292105941000045</north>
+<south>54.291027995000036</south>
+<east>-116.45212189099999</east>
+<west>-116.45396455099996</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.452121892,54.292105941,5.0 -116.452121914,54.291836464,5.0 -116.452121891,54.2916557090001,5.0 -116.452121891,54.2910280610001,5.0 -116.453964359,54.291027995,5.0 -116.453964551,54.2921059060001,5.0 -116.452121892,54.292105941,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.453043173002,54.291566968,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_17">
+<name>WELL SITE, 99918 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1194266</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>WELL SITE</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>99918 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=99918+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=99918+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=99918%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=99918%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.26729838700004</north>
+<south>54.26620639400005</south>
+<east>-116.44156222799995</east>
+<west>-116.44327651199995</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.442509298,54.2672906550001,5.0 -116.442432575,54.2672912990001,5.0 -116.442355853,54.2672919440001,5.0 -116.441588637,54.267298387,5.0 -116.441562228,54.2662205770001,5.0 -116.44325006,54.2662063940001,5.0 -116.443276512,54.2672842050001,5.0 -116.442509298,54.2672906550001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.442419359385,54.2667523905,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_25">
+<name>WELLSITE, 89818 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1145624</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>WELLSITE</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>89818 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=89818+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=89818+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=89818%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=89818%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.26942577700004</north>
+<south>54.26823820900006</south>
+<east>-116.46519124399998</east>
+<west>-116.46708701999995</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.465191244,54.2683558140001,5.0 -116.46686755,54.2682382090001,5.0 -116.46708702,54.269308175,5.0 -116.465411991,54.269425777,5.0 -116.465191244,54.2683558140001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.466139415989,54.268831993,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+<Placemark id="kml_21">
+<name>WELLSITE, 89870 CLSR</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:175">
+	<col style="width:250">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>OIL AND GAS / PÉTROLE ET GAZ</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>NRCan PIN / NIP RNCan</b></td>
+		<td>1145622</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PARCEL DESIGNATOR / DÉSIGNATION DE PARCELLE</b></td>
+		<td>WELLSITE</td>
+	</tr>
+    <tr style="background-color:">
+		<td><b>REMAINDER / RÉSIDU</b></td>
+		<td>NO / NON</td>
+	</tr>
+	<tr style="background-color:#E3E3F3">
+		<td><b>PLAN</b></td>
+		<td>89870 CLSR AB<br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/plan/detail?id=89870+CLSR+AB">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/satc/plan/detail?id=89870+CLSR+AB">Français</a>
+		</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>ADMINISTRATIVE AREA / RÉGION ADMINISTRATIVE</b></td>
+		<td>ALEXANDER 134A / RÉSERVE INDIENNE ALEXANDER NO 134A</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:20px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?pln=89870%20CLSR%20AB">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?pln=89870%20CLSR%20AB">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#surfaceOGNormal_surfaceOGHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30149122900008</north>
+<south>54.30050112600003</south>
+<east>-116.43758394999998</east>
+<west>-116.43942914499996</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>10</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.439427774,54.3009951710001,5.0 -116.439429145,54.301489217,5.0 -116.438930183,54.301489702,5.0 -116.437585839,54.3014912290001,5.0 -116.437585008,54.3011047620001,5.0 -116.437584742,54.3009969550001,5.0 -116.437584667,54.300969997,5.0 -116.43758395,54.3005028800001,5.0 -116.438930158,54.3005016050001,5.0 -116.439426403,54.300501126,5.0 -116.439427774,54.3009951710001,5.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.438506258315,54.3009961775001,5.0</coordinates>
+</Point>
+</MultiGeometry>
+</Placemark>
+</Folder>
+<Folder id="kml_ft_Surveys_in_Progress___Arpentage_en_Cours">
+<name>Surveys_in_Progress___Arpentage_en_Cours</name>
+<Placemark id="kml_1">
+<name>201411126</name>
+<visibility>1</visibility>
+<description><![CDATA[<meta charset="UTF-8">
+<style>
+table, th, td{
+	border-collapse: collapse;
+	font-family: arial;
+}
+th, td {
+    padding: 2px;
+}
+</style>
+<table style="width:425">
+	<tr>
+		<td style="text-align:left" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sig-eng.png" alt="logo" />
+		</td>
+	</tr>
+	<tr style="height:150px" >
+		<td style="text-align:left" style="vertical-align:middle" colspan="2">
+			<a href="http://clss.nrcan.gc.ca/">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/sgb_splash.jpg" width="425" alt="logo" />
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:150">
+	<col style="width:275">
+	<tr style="background-color:#E3E3F3">
+		<td><b>DESCRIPTION</b></td>
+		<td>SURVEYS IN PROGRESS / ARPENTAGE EN COURS</td>
+	</tr>
+	<tr style="background-color:">
+		<td><b>PROJECT NUMBER / NUMÉRO DE PROJET</b></td>
+		<td>201411126 <br />
+			<a href="https://clss.nrcan-rncan.gc.ca/clss/project-projet/detail?id=45125">English</a> - <a href="https://clss.nrcan-rncan.gc.ca/clss/project-projet/detail?id=45125">Français</a>
+		</td>
+	</tr>
+</table>
+<table style="width:425">
+	<col style="width:212">
+	<col style="width:212">
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Download Digital Cadastral Data</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/data-donnees/sgb_datasets/ab/ALEXANDER_134A">Téléchargement de données cadastrales numériques</a>
+		</td>
+	</tr>
+	<tr bgcolor="" style="height:40px">
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/en/index.html?prj=201411126">Interactive Map</a>
+		</td>
+		<td style="text-align:center">
+			<a href="https://clss.nrcan-rncan.gc.ca/mb-nc/fr/index.html?prj=201411126">Carte interactive</a>
+		</td>
+	</tr>
+	<tr style="height:50px">
+		<td style="text-align:right" style="vertical-align:baseline" colspan="2">
+			<img src="http://clss.nrcan.gc.ca/data-donnees/KML/wmms.png" alt="logo" />
+		</td>
+	</tr>
+</table>]]></description>
+<styleUrl>#projEnvNormal_projEnvHighlight</styleUrl>
+<Region>
+<LatLonAltBox>
+<north>54.30938302900006</north>
+<south>54.28338755800007</south>
+<east>-116.44516465699996</east>
+<west>-116.45656400599995</west>
+</LatLonAltBox>
+<Lod>
+<minLodPixels>2</minLodPixels>
+<maxLodPixels>-1</maxLodPixels>
+</Lod>
+</Region>
+<MultiGeometry>
+<Point>
+<extrude>0</extrude>
+<coordinates>-116.4508643315,54.2963850937255,0.0</coordinates>
+</Point>
+<Polygon>
+<extrude>0</extrude>
+<tessellate>0</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-116.445164657,54.3089549920001,0.0 -116.450147889,54.2833875580001,0.0 -116.456564006,54.2838152470001,0.0 -116.451586866,54.3093830290001,0.0 -116.445164657,54.3089549920001,0.0</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+</Placemark>
+</Folder>
+</Document></kml>
